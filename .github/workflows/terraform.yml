@@ -65,11 +65,3 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      - name: Debug - Check credentials exist
-        run: |
-          echo "ACCESS_KEY_ID length: ${#AWS_ACCESS_KEY_ID}"
-          echo "SECRET_ACCESS_KEY length: ${#AWS_SECRET_ACCESS_KEY}"
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
