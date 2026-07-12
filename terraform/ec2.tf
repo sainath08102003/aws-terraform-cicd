@@ -36,7 +36,7 @@ resource "aws_security_group" "mainSG" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "terraform-key"
-  public_key = file("~/.ssh/terraform-key.pub")
+  public_key = file("${path.module}/terraform-key.pub")
 }
 
 resource "aws_instance" "webapp" {
@@ -61,5 +61,5 @@ resource "aws_instance" "webapp" {
 }
 
 output "instance_public_ip" {
-  value       = aws_instance.webapp.public_ip
+  value = aws_instance.webapp.public_ip
 }
