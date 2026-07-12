@@ -56,7 +56,7 @@ resource "aws_instance" "webapp" {
   EOF
 
   tags = {
-    Name = "terraform-webinstance"
+    Name = "terraform-webapp"
   }
 }
 
